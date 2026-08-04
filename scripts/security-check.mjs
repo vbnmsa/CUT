@@ -6,6 +6,7 @@ const html = read('index.html')
 const vite = read('vite.config.ts')
 const pkg = JSON.parse(read('package.json'))
 const headers = read('public/_headers')
+const vercel = read('vercel.json')
 
 const checks = [
   ['React-код не использует небезопасную HTML-вставку', !/dangerouslySetInnerHTML|\.innerHTML\s*=/.test(app)],
@@ -18,6 +19,7 @@ const checks = [
   ['Dev/preview задают раздельные security headers', /server:\s*\{\s*headers:\s*developmentSecurityHeaders\s*\}/.test(vite) && /preview:\s*\{\s*headers:\s*productionSecurityHeaders\s*\}/.test(vite)],
   ['Production CSP не разрешает inline-скрипты', /const productionSecurityHeaders[\s\S]*?script-src 'self';/.test(vite)],
   ['Production-шаблон содержит CSP и HSTS', /Content-Security-Policy:/.test(headers) && /Strict-Transport-Security:/.test(headers)],
+  ['Vercel-конфигурация содержит CSP, HSTS и безопасную сборку', /Content-Security-Policy/.test(vercel) && /Strict-Transport-Security/.test(vercel) && /--frozen-lockfile --ignore-scripts/.test(vercel)],
   ['Публичные source maps отключены', /sourcemap:\s*false/.test(vite)],
   ['Версии верхнеуровневых зависимостей зафиксированы', !Object.values({ ...pkg.dependencies, ...pkg.devDependencies }).some(value => value === 'latest' || /^[~^*]/.test(value))],
 ]
