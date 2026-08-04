@@ -1,0 +1,199 @@
+/* Readability fixes for the manifesto, stats and promotions. */
+.about-statement>p,.offers-section .intro-grid>p{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-.015em;color:rgba(244,241,234,.84)}
+.about-section .stat strong span{display:inline;margin:0;color:#F4F1EA!important;font:inherit;letter-spacing:inherit;text-transform:none;line-height:inherit}
+.about-section .principles-grid{width:min(100%,1160px);margin:52px auto 0}
+.about-section .principle{min-height:310px;padding:24px}
+.about-section .principle h3{font-size:clamp(1.65rem,2.5vw,2.7rem)}
+
+/* Promo arrows are real actions. */
+.promo-action{align-self:start;display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.promo-action:hover{background:#fff;color:#070707;transform:translate(3px,-3px)}
+.promo-action svg{width:18px}
+
+/* Static editorial hero image. */
+.red-line{z-index:3;animation:none;box-shadow:0 0 12px rgba(144,0,32,.55)}
+
+/* Expandable additional-services price list. */
+.service-category-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:20px}
+.service-category-head>span{font:700 clamp(1.15rem,2vw,1.8rem) 'Space Grotesk',sans-serif;letter-spacing:.05em;color:#F4F1EA}
+.service-category-head>p{max-width:480px;margin:0;color:#9B978F;font-size:12px;line-height:1.6;text-align:right}
+.service-cards.compact .service-card{min-height:450px;padding:22px}
+.service-cards.compact .service-card h3{margin-top:20px;font-size:clamp(1.7rem,3vw,3.15rem)}
+.service-cards.compact .service-card h4{margin-bottom:14px}
+.service-cards.compact .service-card>p{font-size:12px;line-height:1.5}
+.service-cards.compact .service-duration{margin:16px 0 13px}
+.service-cards.compact .service-duration>b{font-size:2.05rem}
+.service-cards.compact .cut-process{margin-bottom:18px;padding:13px}
+.service-cards.compact .cut-process>strong{padding-bottom:9px}
+.service-cards.compact .cut-process>div{gap:5px;margin-top:9px}
+.service-cards.compact .cut-process span{padding:5px 7px;font-size:8px}
+.extras-price{margin-top:clamp(40px,6vw,76px);border-top:1px solid #2A2A2A;border-bottom:1px solid #2A2A2A}
+.extras-price-toggle{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;padding:25px 0;border:0;background:transparent;color:#F4F1EA;text-align:left;cursor:pointer}
+.extras-price-toggle>span:first-child{display:grid;gap:8px;font:700 clamp(1.55rem,3vw,3.2rem)/1 'Space Grotesk',sans-serif;text-transform:uppercase}
+.extras-price-toggle small{font:600 9px/1 'Inter',sans-serif;letter-spacing:.18em;color:#9B978F}
+.extras-price-toggle>span:last-child{display:flex;align-items:center;gap:12px;font:600 9px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9B978F}
+.extras-price-toggle svg{width:20px;transition:transform .4s ease,color .3s}
+.extras-price.open .extras-price-toggle svg{transform:rotate(180deg);color:#B3123A}
+.extras-price-panel{display:grid;grid-template-columns:minmax(0,2fr) minmax(230px,.75fr);gap:clamp(30px,5vw,72px);max-height:0;overflow:hidden;opacity:0;transform:translateY(-5px);transition:opacity .16s ease,transform .16s ease}
+.extras-price.open .extras-price-panel{max-height:900px;opacity:1;transform:none;padding:8px 0 34px}
+.extras-price-panel>div{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #2A2A2A}
+.extras-price-panel button{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:92px;padding:18px 20px;border:0;border-bottom:1px solid #2A2A2A;background:transparent;color:#F4F1EA;text-align:left;cursor:pointer;transition:background .3s,border-color .3s}
+.extras-price-panel button:nth-child(odd){border-right:1px solid #2A2A2A}
+.extras-price-panel button:hover,.extras-price-panel button:focus-visible{background:#900020;border-color:#900020}
+.extras-price-panel button>span{display:flex;align-items:center;gap:14px}
+.extras-price-panel button small{font:600 9px 'Inter',sans-serif;color:#9B978F}
+.extras-price-panel button strong{font:600 clamp(.86rem,1.2vw,1.05rem) 'Space Grotesk',sans-serif;text-transform:uppercase}
+.extras-price-panel button b{white-space:nowrap;font:600 12px 'Inter',sans-serif}
+.extras-price-panel button svg{width:17px;transition:transform .3s}
+.extras-price-panel button:hover svg{transform:translate(3px,-3px)}
+.extras-price-panel>p{align-self:end;margin:0 0 14px;color:#9B978F;font-size:12px;line-height:1.7}
+
+/* Promotions inside booking details. */
+.promo-picker{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;border:0;margin:8px 0 0;padding:0}
+.promo-picker legend{grid-column:1/-1;margin-bottom:8px;font:700 11px 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase}
+.promo-picker label{display:flex;min-height:72px;flex-direction:column;justify-content:space-between;gap:9px;padding:12px;border:1px solid rgba(255,255,255,.18);cursor:pointer;transition:background .25s,border-color .25s}
+.promo-picker label.active{background:#900020;border-color:#900020}
+.promo-picker input{position:absolute;opacity:0;pointer-events:none}
+.promo-picker span{font-size:10px;color:#fff;text-transform:uppercase;letter-spacing:.05em}
+.promo-picker b{font-size:9px;color:rgba(244,241,234,.58)}
+.promo-picker label.active b{color:#fff}
+.promo-detail{padding:18px 20px;border-left:4px solid #900020;background:#0B0B0B}
+.promo-detail strong{font:700 15px 'Space Grotesk';text-transform:uppercase}
+.promo-detail p{margin:8px 0 0;color:rgba(244,241,234,.68);font-size:12px;line-height:1.55}
+.promo-detail .promo-eligibility{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);color:rgba(244,241,234,.72)}
+.promo-detail .promo-eligibility.eligible{color:#F4F1EA}
+.promo-detail .promo-eligibility.eligible::before{content:'✓';margin-right:8px;color:#fff}
+.promo-detail .promo-eligibility.not-eligible{color:#d88a9c}
+
+/* Nested Papa + Son appointment flow. */
+.companion-booking{padding:20px;border:1px solid rgba(255,255,255,.2);background:#0A0A0A}
+.companion-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.companion-head span{font-size:8px;letter-spacing:.18em;color:#900020}
+.companion-head h4{margin:5px 0 0;font:700 22px 'Space Grotesk'}
+.companion-head>button,.companion-back{border:0;background:none;color:rgba(244,241,234,.65);font-size:9px;text-transform:uppercase;letter-spacing:.12em;cursor:pointer}
+.add-companion{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:62px;margin-top:18px;padding:0 18px;border:1px solid #900020;background:#900020;color:#fff;text-transform:uppercase;font-size:10px;letter-spacing:.12em;cursor:pointer}
+.companion-summary{display:grid;grid-template-columns:1fr 1fr 1.3fr auto;gap:16px;margin-top:18px;padding:16px;border-top:1px solid rgba(255,255,255,.16);font-size:11px}
+.companion-summary span{color:rgba(244,241,234,.68)}
+.companion-progress{display:grid;grid-template-columns:repeat(3,1fr);margin:20px 0 14px;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.companion-progress span{padding:11px;font-size:8px;letter-spacing:.1em;color:rgba(244,241,234,.4)}
+.companion-progress span.active{background:#900020;color:#fff}
+.companion-services{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.companion-services button{display:flex;justify-content:space-between;gap:14px;padding:15px;border:1px solid rgba(255,255,255,.18);background:#111;color:#fff;text-align:left;cursor:pointer}
+.companion-services button.active,.companion-services button:hover{border-color:#900020}
+.companion-services span{font-size:11px;text-transform:uppercase}
+.companion-services b{font-size:9px;color:rgba(244,241,234,.55)}
+.companion-back{display:flex;align-items:center;gap:7px;margin:4px 0 14px}
+.companion-back svg{width:14px}
+.companion-barbers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.companion-barbers button{display:grid;grid-template-columns:46px 1fr;align-items:center;gap:10px;padding:8px;border:1px solid rgba(255,255,255,.18);background:#111;color:#fff;text-align:left;cursor:pointer}
+.companion-barbers button:hover,.companion-barbers button.active{border-color:#900020}
+.companion-barbers img{grid-row:1/3;width:46px;height:50px;object-fit:cover;filter:grayscale(1)}
+.companion-barbers span{font-size:10px;text-transform:uppercase}
+.companion-barbers b{font-size:8px;color:rgba(244,241,234,.5)}
+.companion-dates{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid rgba(255,255,255,.16)}
+.companion-dates button{display:flex;flex-direction:column;gap:5px;align-items:center;padding:10px 4px;border:0;border-right:1px solid rgba(255,255,255,.16);background:#111;color:#fff;cursor:pointer}
+.companion-dates button:last-child{border:0}
+.companion-dates button.active{background:#900020}
+.companion-dates span{font-size:8px;text-transform:uppercase}
+.companion-dates b{font:700 20px 'Space Grotesk'}
+.companion-times{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
+.companion-times button{display:flex;justify-content:space-between;gap:7px;padding:11px;border:1px solid rgba(255,255,255,.16);background:#111;color:#fff;cursor:pointer}
+.companion-times button.active{background:#900020;border-color:#900020}
+.companion-times button:disabled{opacity:.25;text-decoration:line-through;cursor:not-allowed}
+.companion-times small{font-size:7px}
+.companion-done{width:100%;margin-top:12px}
+
+/* Price breakdown and reusable calendar picker. */
+.form-total{display:block!important}
+.form-total>div{display:flex;justify-content:space-between;gap:20px;padding:7px 0}
+.form-total>div span{font-size:9px;letter-spacing:.12em;color:rgba(244,241,234,.5)}
+.form-total>div b{font-size:12px}
+.form-total .discount-line span,.form-total .discount-line b{color:#900020}
+.form-total .grand-total{align-items:flex-end;margin-top:10px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
+.calendar-options{display:grid!important;grid-template-columns:1fr 1fr 1fr;gap:8px;width:min(620px,100%);margin:-20px 0 30px!important}
+.calendar-options>span{grid-column:1/-1;color:rgba(244,241,234,.55);font-size:9px;letter-spacing:.15em}
+.calendar-options a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px;border:1px solid rgba(255,255,255,.24);font-size:9px;color:#fff;transition:background .25s,color .25s}
+.calendar-options a:hover{background:#fff;color:#070707}
+.calendar-options svg{width:14px}
+.calendar-options .device-calendar>span{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:0 7px}
+.calendar-options .device-calendar>span svg{grid-row:1/3}
+.calendar-options .device-calendar small{grid-column:2;color:rgba(244,241,234,.48);font-size:6px;letter-spacing:.04em;line-height:1.4}
+.calendar-options .device-calendar:hover small{color:rgba(7,7,7,.62)}
+.contacts-section .map-card::before,.contacts-section .map-card::after{display:none}
+
+@media(max-width:767px){.promo-picker{grid-template-columns:1fr 1fr}.promo-picker label:first-of-type{grid-column:1/-1}.companion-summary{grid-template-columns:1fr}.companion-services,.companion-barbers{grid-template-columns:1fr}.companion-dates{overflow-x:auto}.companion-dates button{min-width:62px}.companion-times{grid-template-columns:1fr 1fr}.calendar-options{grid-template-columns:1fr}.calendar-options>span{grid-column:1}.promo-action{width:40px;height:40px}.service-category-head{display:block}.service-category-head>p{margin-top:10px;text-align:left}.service-cards.compact .service-card{min-height:480px;padding:18px}.extras-price-toggle{align-items:flex-end}.extras-price-toggle>span:last-child{font-size:0}.extras-price-panel{grid-template-columns:1fr}.extras-price-panel>div{grid-template-columns:1fr}.extras-price-panel button:nth-child(odd){border-right:0}.extras-price-panel>p{margin:0 0 4px}.extras-price.open .extras-price-panel{padding-bottom:28px}}
+@media(prefers-reduced-motion:reduce){.red-line{animation:none!important}}
+
+/* CUT palette experiment — one semantic color system across every section. */
+:root{
+  --cut-black:#080808;
+  --cut-white:#F4F1EA;
+  --cut-red:#900020;
+  --cut-red-hover:#B3123A;
+  --cut-muted:#9B978F;
+  --cut-border:#2A2A2A;
+  --cut-light:#E5E7EB;
+}
+
+html,body,.hero,.about-section,.booking-section,.faq-section,.contacts-section,
+.social-section,.social-section .social-grid,footer{background:var(--cut-black);color:var(--cut-white)}
+.site-header.is-scrolled{background:rgba(8,8,8,.96);border-color:var(--cut-border)}
+.mobile-menu{background:rgba(8,8,8,.98)}
+.offers-section,.certificates-section{background:var(--cut-black)}
+.reviews-section,.section-light{background:var(--cut-light);color:var(--cut-black)}
+
+.section,.social-section,footer,.steps,.promos-grid,.service-cards,.calendar-days,
+.certificate-grid,.contacts-grid,.review-track,.faq-list,.principles-grid{
+  border-color:var(--cut-border)!important;
+}
+.section-line i,.service-list,.price,.cut-process>strong,.booking-summary>div,
+.extras label,.form-total,.modal-total,.modal form,.cert-action,.footer-bottom,
+.social-copy a,.faq-list article,.companion-summary,.companion-progress{
+  border-color:var(--cut-border)!important;
+}
+
+.promo-card,.service-card,.barber-card,.booking-summary,.form-fields,.booking-success,
+.certificate-card,.modal,.modal-close,.promo-detail,.companion-booking,
+.companion-services button,.companion-barbers button,.companion-dates button,
+.companion-times button,.calendar-days button,.time-grid button{
+  background:var(--cut-border);
+  border-color:#3A3A3A!important;
+}
+.about-section .stat{background:var(--cut-border);border-color:#3A3A3A!important}
+.form-fields input,.form-fields textarea,.modal input{background:var(--cut-black);border-color:#3A3A3A;color:var(--cut-white)}
+.service-card:hover,.service-card.selected,.calendar-days button:hover,.time-grid button:hover:not(:disabled){background:#333;border-color:var(--cut-red)!important}
+
+.hero-sub,.hero blockquote,.hero-meta,.section-line,.intro-grid>p,.booking-head>p,
+.faq-layout>div>p,.service-card>p,.service-info,.barber-content>p,.tools,
+.stage-title>div>span,.stage-title>button,.select-hint,.promo-card p,
+.promo-card>span,.service-list>p,.booking-summary>div span,.form-fields label,
+.extras legend,.delivery legend,.consent small,.form-total span,.modal-total span,
+.booking-success>p,.cert-index,.certificate-card>div>p,.modal-head p,
+.payment-note,.demo-note,.footer-top>div:first-child p,.footer-top nav a,
+.footer-contacts a,.footer-bottom,.faq-answer p,.calendar-options>span,
+.about-section .stat>span,.about-section .principle p,.companion-summary span{
+  color:var(--cut-muted)!important;
+}
+.reviews-section .section-line,.review-meta span{color:#625F59!important}
+
+.header-cta,.btn-primary,.add-companion,.steps button.active,.calendar-days button.active,
+.time-grid button.active,.promo-picker label.active,.companion-progress span.active,
+.companion-dates button.active,.companion-times button.active,.delivery label.active,
+.success-icon,.cert-success>span,.extras label.checked>span,
+.consent:has(input:checked)>span,.social-grid a>span,.social-section .social-grid a>span{
+  background:var(--cut-red)!important;
+  border-color:var(--cut-red)!important;
+  color:var(--cut-white)!important;
+}
+.header-cta:hover,.btn-primary:hover,.add-companion:hover,.btn-secondary:hover,
+.promo-card.accent-red:hover,.promo-card.accent-blue:hover,.certificate-card:hover,
+.certificate-card:nth-child(2):hover,.barber-bottom a:hover{
+  background:var(--cut-red-hover)!important;
+  border-color:var(--cut-red-hover)!important;
+  color:var(--cut-white)!important;
+}
+.promo-action:hover,.calendar-options a:hover{background:var(--cut-red-hover);border-color:var(--cut-red-hover);color:var(--cut-white)}
+.reviews-head button:hover{background:var(--cut-red-hover);border-color:var(--cut-red-hover);color:var(--cut-white)}
+
+::selection{background:var(--cut-red-hover);color:var(--cut-white)}
+:focus-visible{outline-color:var(--cut-red-hover)}
