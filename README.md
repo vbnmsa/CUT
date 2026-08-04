@@ -44,29 +44,6 @@ CUT — адаптивный сайт барбершопа в центре Мо�
 - PostCSS и Autoprefixer;
 - CSS-анимации и адаптивная верстка.
 
-## Запуск проекта
-
-Для локального запуска потребуются Node.js и pnpm.
-
-```bash
-git clone https://github.com/vbnmsa/CUT.git
-cd CUT
-pnpm install
-pnpm dev
-```
-
-После запуска откройте адрес, который появится в терминале.
-
-## Команды
-
-```bash
-pnpm dev                 # запуск режима разработки
-pnpm build               # production-сборка
-pnpm preview             # просмотр готовой сборки
-pnpm security:check      # базовая проверка безопасности
-pnpm security:secrets    # поиск случайно добавленных секретов
-```
-
 ## Структура
 
 ```text
