@@ -62,14 +62,7 @@ CUT/
 
 ## Публикация
 
-https://cutt-psi.vercel.app/
-
-Параметры сборки:
-
-```text
-Build command: pnpm build
-Output directory: dist
-```
+[открыть сайт](https://cutt-psi.vercel.app/)
 
 ## Безопасность
 
